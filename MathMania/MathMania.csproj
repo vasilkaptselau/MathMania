@@ -161,6 +161,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\register.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -170,6 +171,7 @@
     <Content Include="Images\Key.png" />
     <Content Include="Images\kids.png" />
     <Content Include="Images\kids2.png" />
+    <Content Include="Images\loginBg.jpg" />
     <Content Include="Images\math1.PNG" />
     <Content Include="Images\reg.png" />
     <Content Include="Images\Wink_24.png" />
