@@ -6,9 +6,8 @@ using System.Data.Entity;
 
 namespace MathMania.Models
 {
-    public class OurDbContext : DbContext
+    public class OurDbContext :  DbContext
     {
-        public virtual DbSet<RegisterVm> Users { get; set; }
-        public virtual DbSet<LoginVm> UserLog { get; set; }
+        public DbSet<UserAccount> UserAccount { get; set; }
     }
-} 
+}
