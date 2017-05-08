@@ -1,7 +1,7 @@
 ﻿body {
     background-color: powderblue;
     background-image: url(../../Images/schoolhouse.png);
-    background-size: 65%;
+    background-size: 85%;
     background-repeat: no-repeat;
     background-position: center;
     padding-left: 300px;
@@ -13,12 +13,14 @@
 }
 
 h1 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    color: white;
+    margin-left: 116px;
 }
 
 h2 {
-    font-family: 'SketchFlow Print';
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: medium;
 }
 
@@ -31,16 +33,18 @@ h2 {
 #buttons {
     display: inline-block;
     position: center;
-    padding-top: 101px;
+    padding-top: 90px;
 }
 
 a.playbtn {
     background-color: aquamarine;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: large;
+    font-size: 35px;
     color: black;
     display: inline-block;
-    padding: 24px 100px 24px 100px;
-    margin-left: 250px;
+    padding: 34px 75px 34px 75px;
+    margin-left: 240px;
+    margin-bottom: 59px;
     text-decoration: none;
+    
 }

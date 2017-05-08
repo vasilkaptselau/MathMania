@@ -9,19 +9,18 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" type="text/css" href="~/css/WelcomeStyleSheet.css">
  
-    <title>Welcome to Math Mania</title>
+    <title>Math Mania</title>
 </head>
 
 <body>
     <div id="content">
         <header>
-            <h1>Welcome to Math Mania, where the fun begins!</h1>
-            <h2>Choose a topic below to start playing!</h2>
+            <h1>Welcome to Math Mania</h1>
         </header>
     </div>
 
     <div id="buttons">
-            @Html.ActionLink("Let's Play!", "Play",
+        @Html.ActionLink("Let's Play!", "Play",
         null, htmlAttributes: new { @class = "playbtn" })
     </div>
 </body>
