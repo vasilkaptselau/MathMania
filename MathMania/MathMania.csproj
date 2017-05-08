@@ -154,6 +154,7 @@
     </Compile>
     <Compile Include="Models\AdditionVm.cs" />
     <Compile Include="Models\LoginVm.cs" />
+    <Compile Include="Models\RegisterVm.cs" />
     <Compile Include="Models\OurDbContext.cs" />
     <Compile Include="Models\UserAccount.cs" />
     <Compile Include="Models\WelcomeVm.cs" />
