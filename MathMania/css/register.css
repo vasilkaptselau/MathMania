@@ -1,34 +1,26 @@
 ﻿body {
-    background-image: url("../Images/loginBg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    
-}
-
-/* For width 800px and larger: */
-@media only screen and (min-width: 800px) {
-    body {
+        background-color: #CAE6F2;
         background-image: url('../Images/loginBg.jpg');
         background-size: 900px;
         background-repeat: no-repeat;
-        background-position: center;
-
+        background-position: 50% 0%;
+        background-attachment: fixed;
     }
+
+.form-control {
+    margin-left: 20px;
+    width: 250px;
+    text-align:left;
 }
 .wrapper {
     text-align: left;
     border: solid 2px aquamarine;
     border-radius: 10px;
-    width: 340px;
-    height: 350px;
-    margin: 10%  auto auto auto;
-    padding-left: 5px;
+    width: 400px;
+    height:400px;
+    margin: 10% auto auto auto;
+    padding-left: 15px;
     padding-right: 5px;
     background-color: aquamarine;
     box-shadow: 10px 10px 5px #000000;
-}
-.form-control {
-    margin-left: 20px;
-    width: 240px;
 }
