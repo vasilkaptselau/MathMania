@@ -23,6 +23,9 @@
             padding-top: 100px;
         }
     </style>
+
+
+
 </head>
 <body style="background: url(../../Images/underwater2.png) no-repeat center center fixed;">
     <div>
@@ -38,17 +41,31 @@
         <div id="plusLbl"> + </div>
         <div id="add2">@addend2</div>
         <div id="equalSign"> = </div>
-        <input id="answer" type="text" />
         <br /><br />
-        @*<input id="result" type="button" value="Submit" />*@
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Submit" id="result"
-                       class="btn btn-default" onclick="location.href='@Url.Action("Addition", "Addition")'" />
-            </div>
-        </div>
+
+
+        <form name="add" onsubmit="cal();">
+
+            <input type="text" id="answer" placeholder="type answer" />
+
+            @*<input type="submit" value="Check" onclick="cal()"/>*@
+        </form>
     </div>
 
+
+    <script>
+
+        function cal() {
+            document.add.answer.value = eval(document.add.text.value)
+
+        //function result() {
+        //    if (answer.value == addend1 + addend2) {
+        //        window.alert("correct!");
+        //    } else {
+        //        window.alert("try again");
+        //           }
+        //    }
+    </script>
 </body>
 </html>
 

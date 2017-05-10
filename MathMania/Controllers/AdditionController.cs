@@ -24,6 +24,6 @@ namespace MathMania.Controllers
         {
             model.sum = model.addend1 + model.addend2;
             return View(model);
-        }
+        }        
     }
 }

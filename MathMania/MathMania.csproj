@@ -172,6 +172,7 @@
     <Content Include="Images\kids2.png" />
     <Content Include="Images\math1.PNG" />
     <Content Include="Images\reg.png" />
+    <Content Include="Images\underwater2.png" />
     <Content Include="Images\Wink_24.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
