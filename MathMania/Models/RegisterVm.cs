@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MathMania.Models
 {
-    public class UserAccount
+    public class RegisterVm
     {
         [Key]
         public int UserID { get; set; }
@@ -11,7 +11,7 @@ namespace MathMania.Models
         [Required(ErrorMessage = "Please enter the Students first name")]
         public string FirstName { get; set; }
 
-        [Required(ErrorMessage ="Please enter the Students last name")]
+        [Required(ErrorMessage = "Please enter the Students last name")]
         public string LastName { get; set; }
 
         [Required(ErrorMessage = "Please create a Login for the student.")]
