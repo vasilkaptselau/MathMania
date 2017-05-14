@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace MathMania.Models
@@ -6,21 +6,23 @@ namespace MathMania.Models
     public class RegisterVm
     {
         [Key]
-        [Display(Name = "UserName")]
+
+        public int UserID { get; set; }
+
+        [Required(ErrorMessage = "Please enter the Students first name")]
+        public string FirstName { get; set; }
+
+        [Required(ErrorMessage = "Please enter the Students last name")]
+        public string LastName { get; set; }
+
+        [Required(ErrorMessage = "Please create a Login for the student.")]
         public string UserName { get; set; }
 
-        [Required]
-        [Display(Name = "Password")]
-        [MaxLength(8)]
-        public string Password { get; set;}
+        [Required(ErrorMessage = "Password Required")]
+        public string Password { get; set; }
 
-        [Required]
         [Display(Name = "Confirm Password")]
-        [MaxLength(8)]
         public string ConfirmPassword { get; set; }
-    }
-
-
 
 
 }
