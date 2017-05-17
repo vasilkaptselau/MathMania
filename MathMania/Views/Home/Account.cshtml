@@ -1,26 +1,22 @@
-@model MathMania.Models.RegisterVm
-
+﻿@model MathMania.Models.Account
 
 @{
     ViewBag.Title = "Register";
     Layout = null;
 }
+
 <!DOCTYPE html>
+
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-
-
-
 
     @Styles.Render("~/Content/bootstrap.css")
     <title>Welcome to Math Mania</title>
     <link rel="stylesheet" type="text/css" href="~/css/register.css">
 </head>
-
 <body>
     <div class="wrapper">
-
         @using (Html.BeginForm())
         {
             @Html.AntiForgeryToken()
@@ -75,8 +71,6 @@
                 </div>
 
             </div>
-
-  
 
         }
     </div>

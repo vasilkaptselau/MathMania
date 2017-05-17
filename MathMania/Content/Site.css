@@ -11,24 +11,8 @@
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
+    /*padding-left: 15px;
     padding-right: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    background-color: aquamarine;
-    opacity: 0.9;
-    height: 450px;
-    width: 900px;
-    margin-right: 55px;
-    margin-left: -55px;
-  
-}
-h1{
-    font-size: 50px;
-    margin-left: 270px;
-}
-h2{
-    font-size: 30px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
