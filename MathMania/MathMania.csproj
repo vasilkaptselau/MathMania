@@ -166,6 +166,7 @@
     <Compile Include="Models\OurDbContext.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\RegisterVm.cs" />
+    <Compile Include="Models\StudentsLocker.cs" />
     <Compile Include="Models\WelcomeVm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -181,10 +182,13 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\dooor.png" />
+    <Content Include="Images\fish.png" />
     <Content Include="Images\home.png" />
     <Content Include="Images\Key.png" />
     <Content Include="Images\kids.png" />
     <Content Include="Images\kids2.png" />
+    <Content Include="Images\lockers1.png" />
+    <Content Include="Images\lockersDoor.png" />
     <Content Include="Images\loginBg.jpg" />
     <Content Include="Images\math1.PNG" />
     <Content Include="Images\reg.png" />
@@ -207,6 +211,8 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-3.1.1-vsdoc.js" />
+    <Content Include="Scripts\CSSPlugin.min.js" />
+    <Content Include="Scripts\EasePack.min.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
@@ -222,6 +228,9 @@
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\TimelineMax.min.js" />
+    <Content Include="Scripts\TweenLite.min.js" />
+    <Content Include="Scripts\TweenMax.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -246,6 +255,7 @@
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
+    <Content Include="Views\Home\Studentslocker.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

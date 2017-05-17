@@ -50,6 +50,11 @@ namespace MathMania.Controllers
 
             return View();
         }
+        [HttpGet]
+        public ActionResult StudentsLocker()
+        {
+            return View();
+        }
 
         public ActionResult Register()
         {
