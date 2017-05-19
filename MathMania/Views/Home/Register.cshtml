@@ -23,7 +23,7 @@
 <body>
     <div class="wrapper">
 
-        @using (Html.BeginForm())
+        @using (Html.BeginForm("Register", "Register", FormMethod.Post))
         {
             @Html.AntiForgeryToken()
 
