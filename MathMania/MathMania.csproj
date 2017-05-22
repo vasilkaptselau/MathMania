@@ -172,14 +172,12 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="css\register.css" />
-
-    <Content Include="css\WelcomeStyleSheet.css" />
-
-
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\1280x1024.png" />
+    <Content Include="Images\schoolhouse.jpg" />
     <Content Include="Images\dooor.png" />
     <Content Include="Images\fish.png" />
     <Content Include="Images\home.png" />
@@ -190,11 +188,10 @@
     <Content Include="Images\lockersDoor.png" />
     <Content Include="Images\loginBg.jpg" />
     <Content Include="Images\math1.PNG" />
-    <Content Include="Images\reg.png" />
     <Content Include="Images\schoolbus.jpg" />
-    <Content Include="Images\schoolhouse.png" />
-    <Content Include="Images\underwater2.png" />
+    <Content Include="Images\reg.png" />
     <Content Include="Images\Wink_24.png" />
+    <Content Include="Properties\schoolhouse.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -241,7 +238,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\TempReg.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />

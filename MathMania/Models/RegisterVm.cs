@@ -25,4 +25,3 @@ namespace MathMania.Models
         public string ConfirmPassword { get; set; }
     }
 
-}
