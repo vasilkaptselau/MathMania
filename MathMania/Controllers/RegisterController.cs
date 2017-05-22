@@ -25,8 +25,7 @@ namespace MathMania.Controllers
         }
         [HttpGet]
         public ActionResult Register()
-        {
-            return View();
+        {            return View();
         }
         [HttpPost]
         public ActionResult Register(RegisterVm model)
@@ -37,7 +36,6 @@ namespace MathMania.Controllers
                 {
                     RegistrationTableAdapter adapter = new RegistrationTableAdapter();
                     var data =  adapter.GetData();
-
                     try
                     {
                         var result = data.Where(m => m.UserName.ToLower() == model.UserName).Single();
@@ -48,7 +46,6 @@ namespace MathMania.Controllers
                         // does not exxists
                         adapter.Insert(model.FirstName, model.LastName, model.UserName, model.Password);
                     }
-
                 }
                 catch (SqlException ex)
                 {
@@ -104,5 +101,6 @@ namespace MathMania.Controllers
  
         }
     }
+
 
 }
