@@ -1,15 +1,9 @@
 
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using MathMania.Models;
-using MathMania.Data;
 using System.Data.SqlClient;
-using static MathMania.Data.MathManiaDatabase;
-using System.Configuration;
-using MathMania.Data.MathManiaDatabaseTableAdapters;
 
 namespace MathMania.Controllers
 {
