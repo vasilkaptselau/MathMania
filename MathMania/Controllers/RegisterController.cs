@@ -30,8 +30,12 @@ namespace MathMania.Controllers
                 Account u = new Account();
                 u.FirstName = model.FirstName;
                 u.LastName = model.LastName;
-                //u.Email = model.Email;
-               
+                u.UserName = model.UserName;
+                u.Password = model.Password;
+                db.UsersAccount.Add(u);
+                db.SaveChanges();
+
+
 
                 Session["user"] = u;
 

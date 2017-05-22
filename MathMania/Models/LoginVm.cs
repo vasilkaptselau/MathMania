@@ -12,7 +12,7 @@ namespace MathMania.Models
 
         [Display(Name = "User Name")]
         [Required(ErrorMessage = "Your user name, please")]
-        [RegularExpression("[a-zA-Z]", ErrorMessage = "Use abc or ABC")]
+        [RegularExpression("^[a-zA-Z]*$", ErrorMessage = "Use abc or ABC")]
         public string UserName { get; set; }
 
         [Required(ErrorMessage = "Please enter your password")]
