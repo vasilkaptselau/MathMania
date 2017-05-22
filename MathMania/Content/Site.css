@@ -7,12 +7,55 @@
     background-position: center;
     padding-left: 300px;
 }
+.navbar {
+    background-color: aquamarine;
+    width: inherit;
+}
+#reg::before {
+    content: url(../../Images/reg.png);
+    position: absolute;
+}
+#reg {
+    border: solid;
+    border-radius: 5px;
+    border-width: thin;
+    border-color: darkgrey;
+    background-color: aliceblue;
+    color: black;
+    margin-left: -2px;
+}
 
-
+#login::before {
+    content: url(../../Images/Key.png);
+    position: absolute;
+}
+#login {
+    border: solid;
+    border-radius: 5px;
+    border-width: thin;
+    border-color: darkgrey;
+    color: black;
+    margin-left: 10px;
+    background-color: aliceblue;
+}
+h2{
+    color: black;
+    opacity: 1;
+}
+p {
+    color: black;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    /*padding-left: 15px;
-    padding-right: 15px;
+    background-color: aquamarine;
+    opacity: 0.7;
+    border-radius: 10px;
+    height: 450px;
+    width: 900px;
+    margin-right: 550px;
+    margin-left: -55px;
+    margin-top: 30px;
+    box-shadow: 10px 10px 5px #000000;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
