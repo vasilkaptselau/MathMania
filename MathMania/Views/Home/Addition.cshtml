@@ -60,8 +60,10 @@
         <div id="addModule">
 
             <div id="add1">@addend1</div>
+            <input type="hidden" id="addend1" value="@addend1" />
             <div id="plusLbl"> + </div>
             <div id="add2">@addend2</div>
+            <input type="hidden" id="addend2" value="@addend2" />
             <div id="equalSign"> = </div>
             @*<input id="answer" type="text" />*@
             <br /><br />
@@ -71,10 +73,9 @@
                 <input type="submit" value="Submit" id="result"
                  class="btn btn-default" onclick="location.href='@Url.Action("Addition", "Addition")'" />*@
 
-            <form method="post" onsubmit="result(); return false;">
-                <input type="text" id="answer" placeholder="type answer" />
-                <input type="submit" value="Check" />
-            </form>
+            <input type="text" id="answer" placeholder="type answer" />
+            <input type="button" onclick="result();" value="Check" />
+
            @* <input type="button" id="details" value="Check" onclick="result();">*@
 
         </div>
@@ -82,8 +83,10 @@
 
         <script>
             function result() {
-                var answer = getElementById("#answer");
-                if (answer.value == addend1 + addend2) {
+                var answer = document.getElementById("answer");
+                var addend1 = document.getElementById("addend1");
+                var addend2 = document.getElementById("addend2");
+                if (parseInt(answer.value) == parseInt(addend1.value) + parseInt(addend2.value)) {
                     window.alert("correct!");
                 } else {
                     window.alert("try again");
