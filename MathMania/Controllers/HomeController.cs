@@ -10,28 +10,9 @@ namespace MathMania.Controllers
     public class HomeController : Controller
     {
         private OurDbContext db = new OurDbContext();
-
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Welcome()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-        public ActionResult Register()
-        {
-            return View();
+            return View(db.UsersAccount);
         }
 
         [HttpGet]
@@ -40,21 +21,21 @@ namespace MathMania.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Login(LoginVm visitors)
+        public ActionResult Login(LoginVm users)
         {
 
 
-            if (string.IsNullOrEmpty(visitors.UserName) || string.IsNullOrEmpty(visitors.Password)) //check on Null
+            if (string.IsNullOrEmpty(users.UserName) || string.IsNullOrEmpty(users.Password)) //check on Null
             {
                 ViewBag.Error = "Please put User Name and password"; // Show Error Message
                 return View(); // return to Login Page
             }
             else
             {
-                if (db.Users.Any(m => m.UserName == visitors.UserName && m.Password == visitors.Password))  //Find UserName and password in database and compare it
+                if (db.UsersAccount.Any(m => m.UserName == users.UserName && m.Password == users.Password))  //Find UserName and password in database and compare it
                 {
-                    Session["name"] = visitors.UserName;
-                    return View("Welcome"); // if database has user it return welcome page
+                    Session["name"] = users.UserName;
+                    return View("RegIndex"); // if database has user it return welcome page
                 }
 
 
@@ -63,9 +44,44 @@ namespace MathMania.Controllers
             return View(); // return to Login Page
 
         }
-        public ActionResult Addition()
+        public ActionResult Welcome()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+        [HttpGet]
+        public ActionResult StudentsLocker()
         {
             return View();
+        }
+
+        public ActionResult Register()
+        {
+            return View();
+        }
+        //[HttpPost]
+        //public ActionResult Register(UserAccount)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        using (OurDbContext db = new OurDbContext())
+        //        {
+        //            db.UsersAccount.Add(UserAccount);
+        //            db.SaveChanges();
+        //        }
+        //        ModelState.Clear();
+        //        ViewBag.Message = UserAccount.FirstName + " " + acocunt.Lastname + "Successfully Registered";
+        //    }
+        //    return View();
+        //}
+
+
+        public ActionResult Addition()
+        {
+         
+            return View();
+
         }
     }
 }

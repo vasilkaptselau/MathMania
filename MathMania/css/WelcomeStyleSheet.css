@@ -1,0 +1,53 @@
+﻿body {
+    background-color: powderblue;
+    background-image: url(../../Images/schoolhouse.png);
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 300px;
+}
+
+#content {
+    position: center;
+    padding-top: 40px;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    color: white;
+    margin-left: 116px;
+}
+
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+}
+
+#image {
+    position: absolute;
+    padding-top: 100px;
+    padding-left: 40px;
+}
+
+#buttons {
+    display: inline-block;
+    position: center;
+    padding-top: 90px;
+}
+
+a.playbtn {
+    background-color: aquamarine;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+    color: black;
+    display: inline-block;
+    padding: 34px 75px 34px 75px;
+    margin-left: 240px;
+    margin-bottom: 59px;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #000000;
+}
+
+Contact GitHub API Training Shop Blog About © 2017 GitHub, Inc. Terms Privacy S
