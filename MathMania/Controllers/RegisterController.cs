@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using MathMania.Models;
-using MathMania.Data;
 using System.Data.SqlClient;
-using static MathMania.Data.MathManiaDatabase;
-using System.Configuration;
-using MathMania.Data.MathManiaDatabaseTableAdapters;
 
 namespace MathMania.Controllers
 {
@@ -30,32 +24,32 @@ namespace MathMania.Controllers
         [HttpPost]
         public ActionResult Register(RegisterVm model)
         {
-            if (ModelState.IsValid)   // validate all values and save in one bucket
-            {
-                try
-                {
-                    RegistrationTableAdapter adapter = new RegistrationTableAdapter();
-                    var data =  adapter.GetData();
+            //if (ModelState.IsValid)   // validate all values and save in one bucket
+            //{
+            //    try
+            //    {
+            //        RegistrationTableAdapter adapter = new RegistrationTableAdapter();
+            //        var data =  adapter.GetData();
 
-                    try
-                    {
-                        var result = data.Where(m => m.UserName.ToLower() == model.UserName).Single();
+            //        try
+            //        {
+            //            var result = data.Where(m => m.UserName.ToLower() == model.UserName).Single();
                         
-                    }
-                    catch (Exception)
-                    {
-                        // does not exxists
-                        adapter.Insert(model.FirstName, model.LastName, model.UserName, model.Password);
-                    }
+            //        }
+            //        catch (Exception)
+            //        {
+            //            // does not exxists
+            //            adapter.Insert(model.FirstName, model.LastName, model.UserName, model.Password);
+            //        }
 
-                }
-                catch (SqlException ex)
-                {
+            //    }
+            //    catch (SqlException ex)
+            //    {
 
-                }
+            //    }
 
-                return RedirectToAction("Index"); //redirect to passwords generator
-            }
+            //    return RedirectToAction("Index"); //redirect to passwords generator
+            //}
 
             return View();
         }
