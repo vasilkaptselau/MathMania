@@ -46,6 +46,10 @@
                 left: 0px;
                 background-repeat: repeat-x;
             }
+
+            #correctImage{
+                animation-delay: 5s;
+            }
     </style>
 </head>
 <body style="background: url(../../Images/underwater2.png) no-repeat center center fixed;">
@@ -66,20 +70,16 @@
             <div id="add2">@addend2</div>
             <input type="hidden" id="addend2" value="@addend2" />
             <div id="equalSign"> __________ </div>
-            @*<input id="answer" type="text" />*@
+           
             <br /><br />
-            @*<input id="result" type="button" value="Submit" />*@
-            @*<div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Submit" id="result"
-                 class="btn btn-default" onclick="location.href='@Url.Action("Addition", "Addition")'" />*@
+            
             
             <input type="text" id="answer" placeholder="type answer" />
             <input type="button" onclick="result();" value="Check" />
             <p id="correctImage" style="visibility:hidden;"><img src="~/Images/correct_jelly.png" height="200" width="200" /></p>
             <p id="incorrectImage" style="visibility:hidden;"><img src="~/Images/incorrect_Shark.png" height="200" width="200" /></p>
-
-            @* <input type="button" id="details" value="Check" onclick="result();">*@
+            @*<input type="button" onclick="logout()" value="Exit" />
+            <input type="button" onclick="" value="Locker" />*@
         </div>
     </div>
     <script>
@@ -88,15 +88,12 @@
             var addend1 = document.getElementById("addend1");
             var addend2 = document.getElementById("addend2");
             
-            if (parseInt(answer.value) == parseInt(addend1.value) + parseInt(addend2.value)) {
-                //window.alert("correct!");
-                //alert(document.getElementById("correctImage").style.visibility);
+            if (parseInt(answer.value) == parseInt(addend1.value) + parseInt(addend2.value)) {                
                 document.getElementById("correctImage").style.visibility = "visible";                 
                 location.reload();
             } else {
                 //window.alert("try again");
-                document.getElementById("incorrectImage").style.visibility = "visible";
-                location.reload();
+                document.getElementById("incorrectImage").style.visibility = "visible";                
             }
         }
 
