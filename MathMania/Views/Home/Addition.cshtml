@@ -50,9 +50,33 @@
             #correctImage{
                 animation-delay: 5s;
             }
+
+        #home::before {
+            content: url(../../Images/home.png);
+        }
+
+        #reg::before {
+            content: url(../../Images/reg.png);
+        }
+        #lock::before {
+            content: url(../../Images/lockerDoor.png);
+            position: absolute;
+            left:-5px;
+        }
     </style>
 </head>
 <body style="background: url(../../Images/underwater2.png) no-repeat center center fixed;">
+    <div class="btn btn-default col-md-offset-9" id="home" style="margin-top: 10px;">
+        @Html.ActionLink("Home", "Index")
+    </div>
+    <div class="btn btn-default col-md-offset-9" id="reg" style="margin-top: 10px;  margin-left:5px; position:relative">
+        @Html.ActionLink("Logout", "Welcome")
+    </div>
+
+    <div class="btn btn-default col-md-offset-6" id="lock" style="margin-top: 10px; margin-left:5px; position:relative">
+        @Html.ActionLink("Locker", "Locker")
+    </div>
+
     <div id="myAd">
         <div class="myAd_Img" id="myAd_fish" style="z-index:-100;"></div>
         <div style="z-index:200;position:relative;">
@@ -78,8 +102,7 @@
             <input type="button" onclick="result();" value="Check" />
             <p id="correctImage" style="visibility:hidden;"><img src="~/Images/correct_jelly.png" height="200" width="200" /></p>
             <p id="incorrectImage" style="visibility:hidden;"><img src="~/Images/incorrect_Shark.png" height="200" width="200" /></p>
-            @*<input type="button" onclick="logout()" value="Exit" />
-            <input type="button" onclick="" value="Locker" />*@
+            
         </div>
     </div>
     <script>

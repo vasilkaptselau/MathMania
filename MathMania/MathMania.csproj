@@ -153,6 +153,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AdditionVm.cs" />
+    <Compile Include="Models\lockerVM.cs" />
     <Compile Include="Models\LoginVm.cs" />
     <Compile Include="Models\RegisterVm.cs" />
     <Compile Include="Models\WelcomeVm.cs" />
@@ -172,6 +173,7 @@
     <Content Include="Images\Key.png" />
     <Content Include="Images\kids.png" />
     <Content Include="Images\kids2.png" />
+    <Content Include="Images\lockerDoor.png" />
     <Content Include="Images\math1.PNG" />
     <Content Include="Images\reg.png" />
     <Content Include="Images\underwater2.png" />
@@ -210,6 +212,7 @@
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Welcome.cshtml" />
     <Content Include="Views\Home\Addition.cshtml" />
+    <Content Include="Views\Home\Locker.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
