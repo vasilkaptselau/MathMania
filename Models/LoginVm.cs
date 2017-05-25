@@ -10,18 +10,14 @@ namespace MathMania.Models
     public class LoginVm
     {
 
+        [Key]
         [Display(Name = "User Name")]
-        [Required(ErrorMessage = "Your user name, please")]
-        [RegularExpression("^[a-zA-Z]*$", ErrorMessage = "Use abc or ABC")]
         public string UserName { get; set; }
 
         [Required(ErrorMessage = "Please enter your password")]
-        [RegularExpression("[0-9]", ErrorMessage = "Type ONLY six numbers")]
         [Display(Name = "Password")]
-        [MaxLength(6)]
+        [MaxLength(50)]
         public string Password { get; set; }
 
     }
 }
-
-    

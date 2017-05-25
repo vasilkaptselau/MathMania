@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+
+using System;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using MathMania.Models;
+using System.Data.SqlClient;
 
 namespace MathMania.Controllers
 {
@@ -19,23 +19,34 @@ namespace MathMania.Controllers
         }
         [HttpGet]
         public ActionResult Register()
-        {
-            return View();
+        {            return View();
         }
         [HttpPost]
         public ActionResult Register(RegisterVm model)
         {
             if (ModelState.IsValid)   // validate all values and save in one bucket
             {
-                Account u = new Account();
-                u.FirstName = model.FirstName;
-                u.LastName = model.LastName;
-                //u.Email = model.Email;
-               
+                //try
+                //{
+                //    RegistrationTableAdapter adapter = new RegistrationTableAdapter();
+                //    var data =  adapter.GetData();
+                //    try
+                //    {
+                //        var result = data.Where(m => m.UserName.ToLower() == model.UserName).Single();
+                        
+                //    }
+                //    catch (Exception)
+                //    {
+                //        // does not exxists
+                //        adapter.Insert(model.FirstName, model.LastName, model.UserName, model.Password);
+                //    }
+                //}
+                //catch (SqlException ex)
+                //{
 
-                Session["user"] = u;
+                //}
 
-                return RedirectToAction("Index"); //redirect to passwords generator
+                //return RedirectToAction("Index"); //redirect to passwords generator
             }
 
             return View();
@@ -84,4 +95,6 @@ namespace MathMania.Controllers
  
         }
     }
+
+
 }
