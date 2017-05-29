@@ -1,4 +1,5 @@
 
+
 using System;
 using System.Linq;
 using System.Web.Mvc;
@@ -26,27 +27,27 @@ namespace MathMania.Controllers
         {
             if (ModelState.IsValid)   // validate all values and save in one bucket
             {
-                try
-                {
-                    RegistrationTableAdapter adapter = new RegistrationTableAdapter();
-                    var data =  adapter.GetData();
-                    try
-                    {
-                        var result = data.Where(m => m.UserName.ToLower() == model.UserName).Single();
+                //try
+                //{
+                //    RegistrationTableAdapter adapter = new RegistrationTableAdapter();
+                //    var data =  adapter.GetData();
+                //    try
+                //    {
+                //        var result = data.Where(m => m.UserName.ToLower() == model.UserName).Single();
                         
-                    }
-                    catch (Exception)
-                    {
-                        // does not exxists
-                        adapter.Insert(model.FirstName, model.LastName, model.UserName, model.Password);
-                    }
-                }
-                catch (SqlException ex)
-                {
+                //    }
+                //    catch (Exception)
+                //    {
+                //        // does not exxists
+                //        adapter.Insert(model.FirstName, model.LastName, model.UserName, model.Password);
+                //    }
+                //}
+                //catch (SqlException ex)
+                //{
 
-                }
+                //}
 
-                return RedirectToAction("Index"); //redirect to passwords generator
+                //return RedirectToAction("Index"); //redirect to passwords generator
             }
 
             return View();
@@ -95,6 +96,7 @@ namespace MathMania.Controllers
  
         }
     }
+
 
 
 }
