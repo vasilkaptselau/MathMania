@@ -59,22 +59,21 @@
             content: url(../../Images/reg.png);
         }
         #lock::before {
-            content: url(../../Images/lockerDoor.png);
-            position: absolute;
-            left:-5px;
+            content: url(../../Images/exam.png);
+           
         }
     </style>
 </head>
 <body style="background: url(../../Images/underwater2.png) no-repeat center center fixed;">
     <div class="btn btn-default col-md-offset-9" id="home" style="margin-top: 10px;">
-        @Html.ActionLink("Home", "Index")
+        @Html.ActionLink("Home", "Welcome")
     </div>
     <div class="btn btn-default col-md-offset-9" id="reg" style="margin-top: 10px;  margin-left:5px; position:relative">
-        @Html.ActionLink("Logout", "Welcome")
+        @Html.ActionLink("Logout", "Index")
     </div>
 
-    <div class="btn btn-default col-md-offset-6" id="lock" style="margin-top: 10px; margin-left:5px; position:relative">
-        @Html.ActionLink("Locker", "Locker")
+    <div class="btn btn-default col-md-offset-9" id="lock" style="margin-top: 10px; margin-left:5px; position:relative">
+        @Html.ActionLink("Grades", "Studentslocker")
     </div>
 
     <div id="myAd">
