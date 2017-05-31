@@ -181,6 +181,11 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\1280x1024.png" />
+    <Content Include="Images\bam.jpg" />
+    <Content Include="Images\equal.PNG" />
+    <Content Include="Images\greater.PNG" />
+    <Content Include="Images\less.PNG" />
+    <Content Include="Images\lily-pond-clipart-1.jpg" />
     <Content Include="Images\schoolhouse.jpg" />
     <Content Include="Images\dooor.png" />
     <Content Include="Images\fish.png" />
@@ -258,6 +263,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Subtraction\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
