@@ -1,4 +1,4 @@
-﻿@model MathMania.Models.AdditionVm
+@model MathMania.Models.AdditionVm
 @{ViewBag.Title = "Index";
     Layout = null;}
 
@@ -23,8 +23,9 @@
             display: block;
             text-align: center;
             padding-top: 100px;
-            margin-left:-20%;
+            margin-left: -20%;
         }
+
         #myAd {
             width: 1600px;
             height: 600px;
@@ -45,9 +46,36 @@
                 left: 0px;
                 background-repeat: repeat-x;
             }
+
+            #correctImage{
+                animation-delay: 5s;
+            }
+
+        #home::before {
+            content: url(../../Images/home.png);
+        }
+
+        #reg::before {
+            content: url(../../Images/reg.png);
+        }
+        #lock::before {
+            content: url(../../Images/exam.png);
+           
+        }
     </style>
 </head>
 <body style="background: url(../../Images/underwater2.png) no-repeat center center fixed;">
+    <div class="btn btn-default col-md-offset-9" id="home" style="margin-top: 10px;">
+        @Html.ActionLink("Home", "Welcome")
+    </div>
+    <div class="btn btn-default col-md-offset-9" id="reg" style="margin-top: 10px;  margin-left:5px; position:relative">
+        @Html.ActionLink("Logout", "Index")
+    </div>
+
+    <div class="btn btn-default col-md-offset-9" id="lock" style="margin-top: 10px; margin-left:5px; position:relative">
+        @Html.ActionLink("Grades", "Studentslocker")
+    </div>
+
     <div id="myAd">
         <div class="myAd_Img" id="myAd_fish" style="z-index:-100;"></div>
         <div style="z-index:200;position:relative;">
@@ -58,51 +86,51 @@
             }
         </div>
         <div id="addModule">
-
+            <p><img src="~/Images/correct_jelly.png" height="100" width="100" hidden /> </p>
             <div id="add1">@addend1</div>
             <input type="hidden" id="addend1" value="@addend1" />
             <div id="plusLbl"> + </div>
             <div id="add2">@addend2</div>
             <input type="hidden" id="addend2" value="@addend2" />
-            <div id="equalSign"> = </div>
-            @*<input id="answer" type="text" />*@
+            <div id="equalSign"> __________ </div>
+           
             <br /><br />
-            @*<input id="result" type="button" value="Submit" />*@
-            @*<div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Submit" id="result"
-                 class="btn btn-default" onclick="location.href='@Url.Action("Addition", "Addition")'" />*@
-
+            
+            
             <input type="text" id="answer" placeholder="type answer" />
             <input type="button" onclick="result();" value="Check" />
-
-           @* <input type="button" id="details" value="Check" onclick="result();">*@
-
+            <p id="correctImage" style="visibility:hidden;"><img src="~/Images/correct_jelly.png" height="200" width="200" /></p>
+            <p id="incorrectImage" style="visibility:hidden;"><img src="~/Images/incorrect_Shark.png" height="200" width="200" /></p>
+            
         </div>
     </div>
+    <script>
+        function result() {
+            var answer = document.getElementById("answer");
+            var addend1 = document.getElementById("addend1");
+            var addend2 = document.getElementById("addend2");
 
-        <script>
-            function result() {
-                var answer = document.getElementById("answer");
-                var addend1 = document.getElementById("addend1");
-                var addend2 = document.getElementById("addend2");
-                if (parseInt(answer.value) == parseInt(addend1.value) + parseInt(addend2.value)) {
-                    window.alert("correct!");
-                } else {
-                    window.alert("try again");
-                }
+            if (parseInt(answer.value) == parseInt(addend1.value) + parseInt(addend2.value)) {
+                document.getElementById("correctImage").style.visibility = "visible";
+                location.reload();
+            } else {
+                //window.alert("try again");
+                document.getElementById("incorrectImage").style.visibility = "visible";
             }
-        </script>
+        }
+
+        
+    </script>
     <script type="text/javascript" src="~/Scripts/CSSPlugin.min.js"></script>
     <script type="text/javascript" src="~/Scripts/EasePack.min.js"></script>
     <script type="text/javascript" src="~/Scripts/TweenLite.min.js"></script>
     <script type="text/javascript" src="~/Scripts/TimelineMax.min.js"></script>
     <script type="text/javascript" src="~/Scripts/TweenMax.min.js"></script>
     <script type="text/javascript">
-            (function () {
-                var tl2 = new TimelineMax({ repeat: -1 });
-                tl2.to('#myAd_fish', 3500, { backgroundPositionX: -26490, ease: Back.easeOut });
-            }());
+        (function () {
+            var tl2 = new TimelineMax({ repeat: -1 });
+            tl2.to('#myAd_fish', 3500, { backgroundPositionX: -26490, ease: Back.easeOut });
+        }());
 
     </script>
 </body>

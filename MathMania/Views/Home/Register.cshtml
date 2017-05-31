@@ -16,6 +16,11 @@
     @Styles.Render("~/Content/bootstrap.css")
     <title>Welcome to Math Mania</title>
     <link rel="stylesheet" type="text/css" href="~/css/register.css">
+    <style>
+        #home::before {
+            content: url(../../Images/home.png);
+        }
+    </style>
 </head>
     <div class="btn btn-default col-md-offset-10" id="home" style="margin-top: 10px;">
         @Html.ActionLink("Home", "Index")
