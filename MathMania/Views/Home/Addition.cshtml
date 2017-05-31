@@ -111,14 +111,16 @@
             var addend1 = document.getElementById("addend1");
             var addend2 = document.getElementById("addend2");
             
-            if (parseInt(answer.value) == parseInt(addend1.value) + parseInt(addend2.value)) {                
-                document.getElementById("correctImage").style.visibility = "visible";                 
+            if (parseInt(answer.value) == parseInt(addend1.value) + parseInt(addend2.value)) {
+                document.getElementById("correctImage").style.visibility = "visible";
                 location.reload();
             } else {
-                //window.alert("try again");
-                document.getElementById("incorrectImage").style.visibility = "visible";                
-            }
-        }
+                (parseInt(answer.value) != parseInt(addend1.value) + parseInt(addend2.value)) 
+                    //window.alert("try again");
+                    document.getElementById("incorrectImage").style.visibility = "visible";
+                    location.reload();
+                }
+            }                 
 
         
     </script>
