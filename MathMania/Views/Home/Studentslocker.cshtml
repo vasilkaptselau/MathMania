@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Studentslocker";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    @Styles.Render("~/Content/bootstrap.css")
+    <title>Welcome to Math Mania</title>
+    <style>
+        body {
+            margin: 1% auto auto 15%;
+            background-color: aquamarine;
+        }
+        .door:hover {
+            -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+        }
+
+        #name {
+            position: absolute;
+            margin-left: 370px;
+            margin-top: 100px;
+            font-size: 24px;
+            visibility: hidden;
+            z-index: 2;
+        }
+
+        .door:hover ~ #name h3 {
+            visibility: visible;
+        }
+        #home::before {
+            content: url(../../Images/home.png);
+        }
+    </style>
+</head>
+<body>
+    <div class="btn btn-default col-md-offset-10" id="home" style="margin-top: 10px;">
+        @Html.ActionLink("Home", "Index")
+    </div>
+    @*<div class="btn btn-default col-md-offset-0" id="reg" style="margin-top: 10px; margin-left:10px; position:absolute">
+        @Html.ActionLink("Register", "Register")
+    </div>*@
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div>
+            <div id="name"><h3>Hi!@Session["name"]</h3></div>
+            <div style="background: url(../../Images/lockers1.png) no-repeat 0px 0px; z-index: -100;">
+
+                <div class="door" style="z-index: 200;margin-left:290px;">
+                    <img src="../../Images/lockersDoor.png" />
+                </div>
+                <div class="doorNAME" id="name"style="margin-top:-500px;"><h3>Mike</h3></div>
+            </div>
+        </div>
+    }
+</body>
+</html>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+
+
+
+
+

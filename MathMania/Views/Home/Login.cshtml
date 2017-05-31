@@ -1,5 +1,5 @@
-﻿
-@model MathMania.Models.LoginVm
+﻿@model MathMania.Models.LoginVm
+
 @{
     ViewBag.Title = "Login";
     Layout = null;
@@ -52,13 +52,15 @@
         @Html.ActionLink("Home", "Index")
     </div>
     <div class="btn btn-default col-md-offset-0" id="reg" style="margin-top: 10px; margin-left:10px; position:absolute">
-        @Html.ActionLink("Register", "RegisterVm")
+        @Html.ActionLink("Register", "Register")
     </div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
 
-  
     <div>
         <div class="form-horizontal">
-            <h2>Please Login for Enter!!!</h2>
+            <h2>Please Login</h2>
             <p style="color: red;">
                 @ViewBag.Error
             </p>
@@ -82,13 +84,16 @@
 
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10" id="Door" style="margin-top:10px; margin-right:5px;">
-                    <input type="submit" class="btn btn-success"  value="Open Game" />
+                    <input type="submit" class="btn btn-success"  value="Open Game"  />
+                    <div id="buttons">
+                    
+                    </div>
                 </div>
             </div>
            
         </div>
     </div>
-    
+    }
 </body>
 </html>
 
