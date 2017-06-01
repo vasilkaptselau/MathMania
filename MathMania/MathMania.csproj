@@ -181,10 +181,12 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\1280x1024.png" />
+    <Content Include="Images\check.png" />
     <Content Include="Images\correct_jelly.png" />
     <Content Include="Images\exam.png" />
     <Content Include="Images\incorrect_shark.png" />
     <Content Include="Images\correct_jellyfish.png" />
+    <Content Include="Images\next.png" />
     <Content Include="Images\schoolhouse.jpg" />
     <Content Include="Images\dooor.png" />
     <Content Include="Images\fish.png" />
