@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="MathMania">
+  <DataContextMoniker Name="/MathManiaDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f2b3d924-1ba0-41df-8050-5a6cb1ed191b" absoluteBounds="3.125, 1.375, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/MathManiaDataContext/Account" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f0a130a4-fda2-4ba5-8afe-aa6fe2673ce2" absoluteBounds="3.14, 1.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

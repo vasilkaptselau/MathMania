@@ -1,7 +1,9 @@
-﻿using MathMania.Models;
+﻿using MathMania.Data;
+using MathMania.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Transactions;
 using System.Web;
 using System.Web.Mvc;
 
@@ -23,8 +25,6 @@ namespace MathMania.Controllers
         [HttpPost]
         public ActionResult Login(LoginVm users)
         {
-
-
             if (string.IsNullOrEmpty(users.UserName) || string.IsNullOrEmpty(users.Password)) //check on Null
             {
                 ViewBag.Error = "Please put User Name and password"; // Show Error Message
@@ -32,17 +32,19 @@ namespace MathMania.Controllers
             }
             else
             {
-                if (db.UsersAccount.Any(m => m.UserName == users.UserName && m.Password == users.Password))  //Find UserName and password in database and compare it
+                using (MathManiaDataContext context = new MathManiaDataContext())
                 {
-                    Session["name"] = users.UserName;
-                    return View("RegIndex"); // if database has user it return welcome page
+                   int count =  context.Accounts.Where(m => m.UserName == users.UserName && m.Password == users.Password).Count();
+                    if(count == 0)
+                    {
+                        ModelState.AddModelError("", "Account does not exists. Register");
+                        return View(users);
+                    }
+
+                    return RedirectToAction("Welcome");
+
                 }
-
-
             }
-            ViewBag.Error = "User Name is not found or password doesn't match"; // Show Error Message
-            return View(); // return to Login Page
-
         }
         public ActionResult Welcome()
         {
@@ -55,26 +57,59 @@ namespace MathMania.Controllers
         {
             return View();
         }
+        [HttpGet]
 
         public ActionResult Register()
         {
             return View();
         }
-        //[HttpPost]
-        //public ActionResult Register(UserAccount)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        using (OurDbContext db = new OurDbContext())
-        //        {
-        //            db.UsersAccount.Add(UserAccount);
-        //            db.SaveChanges();
-        //        }
-        //        ModelState.Clear();
-        //        ViewBag.Message = UserAccount.FirstName + " " + acocunt.Lastname + "Successfully Registered";
-        //    }
-        //    return View();
-        //}
+        [HttpPost]
+        public ActionResult Register(RegisterVm model)
+        {
+            if (ModelState.IsValid)   // validate all values and save in one bucket
+            {
+
+                using (MathManiaDataContext context = new MathManiaDataContext())
+                {
+
+                    try
+                    {
+                        int count = context.Accounts.Where(m => m.UserName.ToLower() == model.UserName).Count();
+
+                        if (count == 0)
+                        {
+                            using (TransactionScope transaction = new TransactionScope())
+                            {
+                                Data.Account account = new Data.Account();
+                                account.UserName = model.UserName;
+                                account.FirstName = model.FirstName;
+                                account.LastName = model.LastName;
+                                account.Password = model.Password;
+                                account.TeacherName = model.TeacherName;
+
+                                context.Accounts.InsertOnSubmit(account);
+
+                                context.SubmitChanges();
+                                transaction.Complete();
+                                return RedirectToAction("Welcome");
+                            }
+
+                        }
+                        else
+                        {
+                            ModelState.AddModelError("", "UserName already exists, Please login");
+                        }
+                        return View(model);
+                    }
+                    catch (Exception)
+                    {
+                    }
+                }
+
+            }
+
+            return View(model);
+        }
 
 
         public ActionResult Addition()
