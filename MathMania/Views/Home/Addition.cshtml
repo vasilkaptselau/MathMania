@@ -47,10 +47,19 @@
                 background-repeat: repeat-x;
             }
 
-            #correctImage{
-                animation-delay: 5s;
-            }
-
+        #correctImage {
+            animation-delay: 5s;
+            margin-left: 400px;
+            margin-top: -400px;
+            
+        }
+        #incorrectImage{
+            position:relative;
+            margin-top:-220px;
+            margin-left:-650px;
+            z-index:-100;
+        }
+       
         #home::before {
             content: url(../../Images/home.png);
         }
@@ -88,7 +97,7 @@
         <div id="addModule">
             <p><img src="~/Images/correct_jelly.png" height="100" width="100" hidden /> </p>
             <div id="add1">@addend1</div>
-            <input type="hidden" id="addend1" value="@addend1" />
+            <input type="hidden" id="addend1" value="@addend1"/>
             <div id="plusLbl"> + </div>
             <div id="add2">@addend2</div>
             <input type="hidden" id="addend2" value="@addend2" />
@@ -97,10 +106,11 @@
             <br /><br />
             
             
-            <input type="text" id="answer" placeholder="type answer" />
+            <input type="text" id="answer"  style="width:100px;"/>
             <input type="button" onclick="result();" value="Check" />
-            <p id="correctImage" style="visibility:hidden;"><img src="~/Images/correct_jelly.png" height="200" width="200" /></p>
-            <p id="incorrectImage" style="visibility:hidden;"><img src="~/Images/incorrect_Shark.png" height="200" width="200" /></p>
+            <input type="button" id="next" style="visibility:hidden;" onclick="location.reload();" value="Next" />
+            <div id="correctImage" style="visibility:hidden;"><img src="~/Images/correct_jellyfish.png"/></div>
+            <div id="incorrectImage" style="visibility:hidden;"><img src="~/Images/shark.png" height="300"/></div>
             
         </div>
     </div>
@@ -112,9 +122,11 @@
 
             if (parseInt(answer.value) == parseInt(addend1.value) + parseInt(addend2.value)) {
                 document.getElementById("correctImage").style.visibility = "visible";
-                location.reload();
+                document.getElementById("incorrectImage").style.visibility = "hidden";
+                document.getElementById("next").style.visibility = "visible";
+                
             } else {
-                //window.alert("try again");
+                
                 document.getElementById("incorrectImage").style.visibility = "visible";
             }
         }
