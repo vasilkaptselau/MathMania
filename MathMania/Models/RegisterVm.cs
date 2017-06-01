@@ -23,6 +23,15 @@ namespace MathMania.Models
 
         [Display(Name = "Confirm Password")]
         public string ConfirmPassword { get; set; }
+
+        [Display(Name = "Teacher Name")]
+        public string TeacherName { get; set; }
+
+        public int Attempts { get; set; }
+
+        public int Correct { get; set; }
+        
     }
 }
+
 
