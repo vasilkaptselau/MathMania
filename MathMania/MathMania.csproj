@@ -191,6 +191,7 @@
     <Content Include="Images\correct_jelly.png" />
     <Content Include="Images\exam.png" />
     <Content Include="Images\incorrect_shark.png" />
+    <Content Include="Images\correct_jellyfish.png" />
     <Content Include="Images\schoolhouse.jpg" />
     <Content Include="Images\dooor.png" />
     <Content Include="Images\fish.png" />
@@ -204,6 +205,7 @@
     <Content Include="Images\math1.PNG" />
     <Content Include="Images\schoolbus.jpg" />
     <Content Include="Images\reg.png" />
+    <Content Include="Images\shark.png" />
     <Content Include="Images\Wink_24.png" />
     <Content Include="Properties\schoolhouse.png" />
     <Content Include="Scripts\bootstrap.js" />
