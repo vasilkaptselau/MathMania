@@ -125,8 +125,7 @@
     </Reference>
     <Reference Include="System.Web.Optimization">
       <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    </Reference>    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
     </Reference>
@@ -136,8 +135,7 @@
     </Reference>
     <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
-    </Reference>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>    </Reference>
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
@@ -147,8 +145,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />    <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\AdditionController.cs" />
@@ -158,8 +155,7 @@
     </Compile>
     <Compile Include="Migrations\201705080739142_MathGame.cs" />
     <Compile Include="Migrations\201705080739142_MathGame.Designer.cs">
-      <DependentUpon>201705080739142_MathGame.cs</DependentUpon>
-    </Compile>
+      <DependentUpon>201705080739142_MathGame.cs</DependentUpon>    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AdditionVm.cs" />
     <Compile Include="Models\LoginVm.cs" />
@@ -182,16 +178,21 @@
     <Content Include="Content\Site.css" />
     <Content Include="Images\1280x1024.png" />
 
+    <Content Include="Images\check.png" />
+
+
     <Content Include="Images\bam.jpg" />
     <Content Include="Images\equal.PNG" />
     <Content Include="Images\greater.PNG" />
     <Content Include="Images\less.PNG" />
     <Content Include="Images\lily-pond-clipart-1.jpg" />
 
+
     <Content Include="Images\correct_jelly.png" />
     <Content Include="Images\exam.png" />
     <Content Include="Images\incorrect_shark.png" />
     <Content Include="Images\correct_jellyfish.png" />
+    <Content Include="Images\next.png" />
     <Content Include="Images\schoolhouse.jpg" />
     <Content Include="Images\dooor.png" />
     <Content Include="Images\fish.png" />
