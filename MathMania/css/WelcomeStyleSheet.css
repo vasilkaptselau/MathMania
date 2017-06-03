@@ -1,11 +1,10 @@
 ﻿body {
     background-color: powderblue;
     background-image: url(../../Images/schoolhouse.png);
-    background-size: 75%;
+    background-size: 85%;
     background-repeat: no-repeat;
     background-position: center;
     padding-left: 300px;
-    padding-bottom: -500px;
 }
 
 #content {
@@ -37,27 +36,13 @@ h2 {
     padding-top: 90px;
 }
 
-a.addbtn {
+a.playbtn {
     background-color: aquamarine;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 35px;
     color: black;
     display: inline-block;
     padding: 34px 75px 34px 75px;
-    margin-left: 10px;
-    margin-bottom: 59px;
-    text-decoration: none;
-    border-radius: 10px;
-    box-shadow: 10px 10px 5px #000000;
-}
-
-a.subbtn {
-    background-color: aquamarine;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 35px;
-    color: black;
-    display: inline-block;
-    padding: 30px 70px 30px 70px;
     margin-left: 240px;
     margin-bottom: 59px;
     text-decoration: none;
