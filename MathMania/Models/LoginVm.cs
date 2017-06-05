@@ -19,6 +19,7 @@ namespace MathMania.Models
         [RegularExpression("[0-9]", ErrorMessage = "Type ONLY six numbers")]
         [Display(Name = "Password")]
         [MaxLength(6)]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
 
     }

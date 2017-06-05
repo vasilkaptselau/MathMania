@@ -53,7 +53,7 @@
             margin-top: -400px;
         }
 
-        #incorrectImage {
+        #incorrectImage{
             position: relative;
             margin-top: -220px;
             margin-left: -650px;
@@ -69,6 +69,7 @@
             width: 50px;
             margin-top: -15px;
         }
+
 
         #home::before {
             content: url(../../Images/home.png);
@@ -107,7 +108,7 @@
         <div id="addModule">
             <p><img src="~/Images/correct_jelly.png" height="100" width="100" hidden /> </p>
             <div id="add1">@addend1</div>
-            <input type="hidden" id="addend1" value="@addend1" />
+            <input type="hidden" id="addend1" value="@addend1"/>
             <div id="plusLbl"> + </div>
             <div id="add2">@addend2</div>
             <input type="hidden" id="addend2" value="@addend2" />
@@ -115,12 +116,12 @@
 
             <br /><br />
 
-
             <input type="text" id="answer" style="width:100px;" />
             <input type="image" src="~/Images/check.png" onclick="result();" id="check" value="Check" style="visibility:visible;"/>
             <input type="image" id="next" src="~/Images/next.png" style="visibility:hidden;" onclick="location.reload();" value="Next" />
             <div id="correctImage" style="visibility:hidden;"><img src="~/Images/correct_jellyfish.png" /></div>
             <div id="incorrectImage" style="visibility:hidden;"><img src="~/Images/shark.png" height="300" /></div>
+
 
         </div>
     </div>
@@ -134,10 +135,12 @@
                 document.getElementById("correctImage").style.visibility = "visible";
                 document.getElementById("incorrectImage").style.visibility = "hidden";
                 document.getElementById("next").style.visibility = "visible";
-                document.getElementById("check").style.visibility = "hidden";
 
+                
             } else {
+                
 
+               
                 document.getElementById("incorrectImage").style.visibility = "visible";
             }
         }
